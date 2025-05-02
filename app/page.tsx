@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import React, { useRef, useEffect, useState } from 'react'
 import { ArrowRight, Check, Magnet, Shield, Speaker, Camera, Mic, Flashlight, Lock, Microchip } from 'lucide-react'
-import {motion, MotionValue, useMotionValue, useScroll, useSpring, useTime, useTransform } from 'framer-motion'
+import { motion, MotionValue, useMotionValue, useScroll, useSpring, useTime, useTransform } from 'framer-motion'
 import Lenis from 'lenis'
 import Button from './components/Button'
 import {
@@ -12,7 +12,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
-const page = () => {
+const Page = () => {
   useEffect(() => {
     const lenis = new Lenis();
     // Use requestAnimationFrame to continuously update the scroll
@@ -22,7 +22,7 @@ const page = () => {
     }
 
     requestAnimationFrame(raf);
-  }, [])
+  }, []);
   const time = useTime();
 
   // Create a looping animation between 0% and 100% for background position
@@ -46,12 +46,11 @@ const page = () => {
       <AccordionSection></AccordionSection>
       <Hands></Hands>
       <Floating></Floating>
-
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;
 
 function Floating() {
   return (
@@ -120,7 +119,7 @@ function AccordionSection() {
             <AccordionItem value="item-2">
               <AccordionTrigger>2. voice trigger</AccordionTrigger>
               <AccordionContent>
-                the alert can be also initiated by saying the word “enough”
+                the alert can be also initiated by saying the word "enough"
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
@@ -655,7 +654,7 @@ function Download() {
               rotateX: rotateX,
               rotateY: rotateY,
               backgroundImage: 'linear-gradient(to left, rgba(255,0,0,0.5) 0%, rgba(0,0,0,0.5) 50%, rgba(255,0,0,0.5) 100%)',
-              backgroundSize: '200% 50%', 
+              backgroundSize: '200% 50%',
               borderImageSlice: 1,
               backgroundPosition: backgroundPosition,
               transformStyle: 'preserve-3d',
@@ -709,7 +708,7 @@ function Download() {
               rotateX: rotateX,
               rotateY: rotateY,
               backgroundImage: 'linear-gradient(to left, rgba(255,0,0,0.5) 0%, rgba(0,0,0,0.5) 50%, rgba(255,0,0,0.5) 100%)',
-              backgroundSize: '200% 50%', 
+              backgroundSize: '200% 50%',
               borderImageSlice: 1,
               backgroundPosition: backgroundPosition,
             }}
@@ -752,7 +751,7 @@ function Download() {
   )
 }
 
-function Word({ children, range, progress }: { children: String, range: [number, number], progress: MotionValue<number> }) {
+function Word({ children, range, progress }: { children: string, range: [number, number], progress: MotionValue<number> }) {
   const opacity = useTransform(progress, range, [0.3, 1]);
   const amount = range[1] - range[0];
   const step = amount / children.length;
@@ -769,7 +768,7 @@ function Word({ children, range, progress }: { children: String, range: [number,
   );
 }
 
-function Characters({ children, range, progress }: { children: String, range: [number, number], progress: MotionValue<number> }) {
+function Characters({ children, range, progress }: { children: string, range: [number, number], progress: MotionValue<number> }) {
   const opacity = useTransform(progress, range, [0.3, 1]);
   return <motion.span style={{ opacity }} className='inline'>{children}</motion.span>;
 }
