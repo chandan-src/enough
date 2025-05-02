@@ -26,12 +26,6 @@ const Page = () => {
   const time = useTime();
 
   // Create a looping animation between 0% and 100% for background position
-  const backgroundPosition = useTransform(
-    time,
-    [0, 3000],
-    ['100% 0%', '-100% 0%'],
-    { clamp: false }
-  );
 
   return (
     <div>
