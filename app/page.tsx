@@ -113,13 +113,11 @@ function AccordionSection() {
               <AccordionContent>
                 the AI uses audio to detect threat or any dangerous situation to activate a silent alert
               </AccordionContent>
-
-
             </AccordionItem>
             <AccordionItem value="item-2">
               <AccordionTrigger>2. voice trigger</AccordionTrigger>
               <AccordionContent>
-                the alert can be also initiated by saying the word "enough"
+                the alert can be also initiated by saying the word &quot;enough&quot;
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
@@ -752,7 +750,6 @@ function Download() {
 }
 
 function Word({ children, range, progress }: { children: string, range: [number, number], progress: MotionValue<number> }) {
-  const opacity = useTransform(progress, range, [0.3, 1]);
   const amount = range[1] - range[0];
   const step = amount / children.length;
   const characters = children.split('');
