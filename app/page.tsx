@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import React, { useRef, useEffect, useState } from 'react'
 import { ArrowRight, Check, Magnet, Shield, Speaker, Camera, Mic, Flashlight, Lock, Microchip } from 'lucide-react'
-import { hover, motion, MotionValue, useMotionValue, useScroll, useSpring, useTime, useTransform } from 'framer-motion'
+import {motion, MotionValue, useMotionValue, useScroll, useSpring, useTime, useTransform } from 'framer-motion'
 import Lenis from 'lenis'
 import Button from './components/Button'
 import {
