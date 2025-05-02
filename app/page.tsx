@@ -23,7 +23,7 @@ const Page = () => {
 
     requestAnimationFrame(raf);
   }, []);
-  const time = useTime();
+ 
 
   // Create a looping animation between 0% and 100% for background position
 
