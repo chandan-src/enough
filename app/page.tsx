@@ -148,7 +148,7 @@ function Features() {
   ];
 
   return (
-    <div>
+    <div className='mb-[300px]'>
       <div className='flex flex-col justify-center items-center mt-20'>
         <h1 className='text-4xl font-light'>every feature for <motion.span style={{
           backgroundImage: 'linear-gradient(90deg, black, red, black)',
@@ -227,7 +227,7 @@ function GetYours() {
 
   return (
     <div>
-      <div className='flex flex-col justify-center items-center mt-30 w-[80%] mx-auto'>
+      <div className='flex flex-col justify-center items-center mt-30 w-[80%] mx-auto mb-[300px]'>
         <h1 className='text-4xl font-light mb-10'>Safety looks good on you :)</h1>
         <div className='flex z-0 flex-col gap-8 justify-between items-center w-full my-8'>
           <div className='flex flex-row w-full gap-4 h-[17rem]'>
@@ -320,9 +320,9 @@ function Alertactivated() {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 3]);
   const y = useTransform(scrollYProgress, [0, 0.5, 1], [0, 300, 600]);
   return (
-    <div className='mt-50'>
+    <div className='mt-50 mb-[300px]'>
       <div className='relativeflex flex-col justify-center items-center mx-auto'>
-        <div className='relative  flex flex-col justify-center items-center w-[80%] mx-auto h-[100vh]'>
+        <div className='relative  flex flex-col justify-center items-center w-[80%] mx-auto h-[40rem]'>
 
           <h1 className='absolute top-[15%] text-4xl font-light mb-10'>what happend if alert is activated?</h1>
 
